@@ -1,0 +1,700 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/log_reg.css">
+    <link rel="stylesheet" href="css/myHomePage.css">
+    <script src="js/jQuery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main-right.js"></script>
+	<script src="js/home-blog.js"></script>
+    <script src="js/send_blog.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="js/concern.js"></script>
+    <script src="js/noConcern.js"></script>
+    <script src="js/homepage.js"></script>
+    <script src="js/hotblog.js"></script>
+    <script src="js/update_info.js"></script>
+</head>
+
+<body>
+    <div class="home_body">
+        <div class="left">
+            <nav class="navigation">
+                <a class="drawer__tab" title="个人设置" href="javascript:;" id="profile_button">
+                    <ion-icon name="medical"></ion-icon>
+                </a>
+                <a  class="drawer__tab" title="主页" href="javascript:;" id="home_button">
+                    <ion-icon name="home"></ion-icon>
+                </a>
+                <a class="drawer__tab" title="个人主页" href="javascript:;" id="homepage_button">
+                    <ion-icon name="people"></ion-icon>
+                </a>
+                <a class="drawer__tab" title="热搜" href="javascript:;" id="hotblog">
+                    <ion-icon name="photos"></ion-icon>
+                </a>
+                <a class="drawer__tab" title="推荐关注的用户" href="#">
+                    <ion-icon name="person-add"></ion-icon>
+                </a>
+                <a class="drawer__tab" title="主页" href="#">
+                    <ion-icon name="help-circle"></ion-icon>
+                </a>
+            </nav>
+            <div class="search">
+                <label>
+                    <span style="display: none;">搜索</span>
+                    <input class="search__input" type="text" placeholder="搜索" value="">
+                </label>
+                <div class="search__icon">
+                    <ion-icon name="search" style="font-size: 24px"></ion-icon>
+                </div>
+            </div>
+            <div class="post">
+                <div class="info">
+                    <a href="https://pawoo.net/@Daozhi" class="permalink">
+                        <div id="myavator" class="account__avatar"
+                            style="background-image: url(avatar/missing.jpg);">
+                        </div>
+                    </a>
+                    <div class="modify">
+                        <a id="myname" href="https://pawoo.net/@Daozhi" class="permalink">@Daozhi</a>
+                        <a id="changemyinfo" href="javascript:;" class="modify_link">
+                            <span>修改个人资料</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="compose_form">
+                    <div class="hidden_waring">
+                        <input type="hidden" name="targetid" id="targetid">
+                        <input type="hidden" name="iscom" id="iscom">
+                        <label>
+                            <input name="targetcont" id="targetcont" placeholder="输入评论内容" type="text" class="waring_input" value="">
+                        </label>
+                        <div id="comment_button_div" style="display: flex; justify-content: space-between;">
+                            <div class="compose_form_cancel">
+                                <div class="compose_form_publish_button_wrapper">
+                                    <button class="publish_button" id="comment_cancel_button">取消发表</button>
+                                </div>
+                            </div>
+                            <div class="compose_form_publish">
+                                <div class="compose_form_publish_button_wrapper">
+                                    <button class="publish_button" id="comment_button">发表评论</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="compose_write">
+                        <div class="compose_textarea">
+                            <textarea class="textarea" placeholder="在想啥？" aria-autocomplete="list"></textarea>
+                            <div class="autosuggest-textarea__suggestions "></div>
+                        </div>
+                        <div class="emoji_picker">
+                            <div class="emoji_button" title="加入表情符号" role="button">
+                                <img class="emojione" alt="🙂" src="pic/smile.svg">
+                            </div>
+                        </div>
+                        <div class="time_limit_dropdown">
+                            <div class="time_limit_dropdown__value">
+                                <button title="设定啪文自毁时间（实验性功能）" class="time_limit_button">
+                                    <ion-icon name="time"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compose_tag">
+                        <div class="compose_form__upload-wrapper">
+                            <div class="compose_form__uploads-wrapper"></div>
+                        </div>
+                        <div class="tag_editor">
+                            <ion-icon name="logo-ionic"></ion-icon>
+                            <input class="tag_editor_input" placeholder="添加标签（按下 Enter 插入）" value="">
+                        </div>
+                    </div>
+                    <div class="compose_form__buttons_wrapper">
+                        <div class="compose_form__buttons">
+                            <div class="compose_form_button_div">
+                                <button title="上传媒体文件" class="compose_form_button_icon">
+                                    <ion-icon name="camera"></ion-icon>
+                                </button>
+                                <label>
+                                    <input type="file"
+                                        accept=".jpg,.jpeg,.png,.gif,.webm,.mp4,.m4v,.mov,image/jpeg,image/png,image/gif,video/webm,video/mp4,video/quicktime"
+                                        style="display: none;">
+                                </label>
+                            </div>
+                            <div class="compose_form_button_div">
+                                <div>
+                                    <button title="设置嘟文可见范围" class="compose_form_button_icon">
+                                        <ion-icon name="baseball"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <button title="正文已被折叠在警告信息之后" class="text_icon_button">CW</button>
+                        </div>
+                        <div class="character_counter__wrapper">
+                            <span class="character_counter" id="character_counter">500</span>
+                        </div>
+                    </div>
+                    <div class="compose_form_publish">
+                        <div class="compose_form_publish_button_wrapper">
+                            <button class="publish_button" id="send_button">啪啪！</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank_area">
+                <img src="pic/home-logo.png" class="logo" id="home-logo">
+            </div>
+        </div>
+        <div class="middle">
+            <div class="middle_colum">
+                <div class="column-header__wrapper">
+                    <h1 class="column-header">
+                        <button>
+                            <ion-icon name="home"></ion-icon>主页
+                        </button>
+                        <div class="column-header__buttons">
+                            <button class="column-header__button" title="显示设置">
+                                <ion-icon name="options"></ion-icon>
+                            </button>
+                        </div>
+                    </h1>
+                    <div class="column-header__collapsible collapsed">
+                        <div class="column-header__collapsible-inner"></div>
+                    </div>
+                </div>
+                <div class="scrollable">
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--右边-->
+        <div class="right">
+
+            <button class="right-top" id="right-top1">
+                <li class="right-li">✉</li><label class="right-label">通知</label>
+                <ion-icon class="right-icon" name="options"></ion-icon>
+            </button>
+
+            <div class="right-box" id="right-box1">
+                <article>
+                    <div class="right_article_cell">
+                        <div class="notic_icon">
+                            <ion-icon name="log-out"></ion-icon>
+                        </div>
+                        <div class="details">
+                            <div class="content">
+                                <p>本站将于2019年5月20日停服维护，届时将不能登陆账号，给大家带来不便尽情谅解，本站将致力于为用户提供更好的服务！</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <button class="right-bottom" id="right-bottom1">︾</button>
+
+            <button class="right-top" id="right-top2">
+                <li class="right-li">☸</li><label class="right-label">关注</label>
+                <ion-icon class="right-icon" name="options"></ion-icon>
+            </button>
+
+            <div class="right-box" id="right-box2">
+
+            </div>
+
+            <button class="right-bottom" id="right-bottom2">︾</button>
+
+        </div>
+
+    </div>
+	
+	
+
+    <div class="middle_colum homepage">
+        <div class="column-header__wrapper">
+            <h1 class="column-header">
+                <button>
+                    <ion-icon name="people"></ion-icon>个人主页
+                </button>
+                <div class="column-header__buttons">
+                    <button class="column-header__button" title="显示设置">
+                        <ion-icon name="options"></ion-icon>
+                    </button>
+                </div>
+            </h1>
+            <div class="column-header__collapsible collapsed">
+                <div class="column-header__collapsible-inner"></div>
+            </div>
+        </div>
+		<!--加到这里-->
+        <div class="myHomepage_header">
+            <div class="myHomepage_avatar">
+                <div class="myHomepage_avatar_image">
+                    <img id="homepage_avator" src="pic/missing.png">
+                </div>
+            </div>
+
+            <div class="myHomepage_concern" title="关注">
+                <ion-icon id="concern_button" name="heart"></ion-icon>
+            </div>
+
+            <div class="myHomepage_info">
+                <span id="myinfo">粉鞋还是灰鞋？这几天你们可能刷到了相关的讨论</span>
+            </div>
+
+            <!--<div class="myHomepage_action_bar">
+                <div class="myHomepage_avtiob_bar_blog">
+                    <button class="publish_button" id="myHomepage_avtiob_bar_blog_button">显示微博</button>
+                </div>
+                <div class="myHomepage_avtiob_bar_comment">
+                    <button class="publish_button" id="myHomepage_avtiob_bar_comment_button">显示评论</button>
+                </div>
+            </div>-->
+        </div>
+
+
+        <div class="homepage_scrollable">
+            <div id="homepage_blog" class="article_list"></div>
+        </div>
+    </div>
+
+
+    <div class="middle_colum profile">
+        <div class="column-header__wrapper">
+            <h1 class="column-header">
+                <button>
+                    <ion-icon name="medical"></ion-icon>个人设置
+                </button>
+                <div class="column-header__buttons">
+                    <button class="column-header__button" title="显示设置">
+                        <ion-icon name="options"></ion-icon>
+                    </button>
+                </div>
+            </h1>
+            <div class="column-header__collapsible collapsed">
+                <div class="column-header__collapsible-inner"></div>
+            </div>
+        </div>
+        <div class="profile_scrollable">
+            <h2 class="profile_h2">更改个人资料</h2>
+            <div class="">
+                <h3 class="password_tip">基本资料</h3>
+                <div class="fields_group">
+                    <div class="input_string">
+                        <input placeholder="昵称" type="text" value="" id="username">
+                        <span>还能输入30个字符</span>
+                    </div>
+                    <div class="input_string">
+                        <input placeholder="地址" type="text" value="" id="address">
+                        <span>还能输入30个字符</span>
+                    </div>
+                    <div class="input_string">
+                        &nbsp;性别：<select id="gender">
+                            <option value="-1">请选择</option>
+                            <option value="0">男</option>
+                            <option value="1">女</option>
+                        </select>
+                        <span>点击下拉菜单选择</span>
+                    </div>
+                    <div class="input_string">
+                        <input placeholder="生日" type="text" value="" id="birthday">
+                        <span>请点击选择</span>
+                    </div>
+                    <div class="input_string">
+                        <input placeholder="简介" type="text" value="" id="info">
+                        <span>还能输入30个字符</span>
+                    </div>
+                </div>
+                <h3 class="password_tip">更换头像</h3>
+                <div title="头像" class="avatar_card">
+                    <div class="avatar_image">
+                        <img id="avator_now" src="pic/missing.png" onclick="fileSelect();">
+                    </div>
+                </div>
+                <div class="fields_group">
+                    <div class="file_upload">
+                        <div class="file_input" style="display:none;">
+                            <form id="avatar_form" action="/uploadImage" method="post" enctype="multipart/form-data">
+                                <input type="text" id="avatar_id" name="userId"/>
+                                <input accept="image/jpeg,image/png" class="file_optional" type="file"
+                                       id="account_avatar_upload" onchange="fileSelected(this);" name="file"/>
+                            </form>
+                        </div>
+                        <span class="hint">文件大小限制 2MB，只支持PNG、GIF 或 JPG 格式。图片分辨率将会压缩至 400×400px！</span>
+                    </div>
+                </div>
+                <h3 class="password_tip">如需更改密码请填写</h3>
+                <div class="fields_group">
+                    <div class="input_string">
+                        <input placeholder="原始密码" type="text" value="" id="old_password">
+                    </div>
+                    <div class="input_string">
+                        <input placeholder="密码" type="text" value="" id="new_password">
+                    </div>
+                    <div class="input_string">
+                        <input placeholder="确认密码" type="text" value="" id="confirm_password">
+                    </div>
+                </div>
+                <div class="submit" id="save_profile">
+                    <button name="button" type="button" class="btn">保存更改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle_colum view_detail">
+        <div class="column-header__wrapper">
+            <h1 class="column-header">
+                <button>
+                    <ion-icon name="people"></ion-icon>查看详情
+                </button>
+                <div class="column-header__buttons">
+                    <button class="column-header__button" title="显示设置">
+                        <ion-icon name="options"></ion-icon>
+                    </button>
+                </div>
+            </h1>
+            <div class="column-header__collapsible collapsed">
+                <div class="column-header__collapsible-inner"></div>
+            </div>
+        </div>
+        <div class="detail_scrollable">
+            <div class="detail_list">
+                <article>
+                    <div class="detail_article_cell">
+                        <div class="avatar">
+                            <div class="account__avatar"
+                                style="width: 48px; height: 48px; background-size: 48px 48px; background-image: url(https://img.pawoo.net/accounts/avatars/000/229/832/original/269558182a9f6067.png);">
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="status">
+                                <a target="_blank" data-id="229832" href="https://pawoo.net/@chipokan" title="chipokan"
+                                    class="status__display-name">
+                                    <span class="display-name">
+                                        <bdi>
+                                            <strong class="display-name__html">ちぽかん_イベントなし</strong>
+                                        </bdi>
+                                    </span>
+                                </a>
+                                <!-- <time datetime="2019-05-02T12:24:34.882Z" title="2019年5月02日 20:24">39秒</time> -->
+                                <span style="float:right">39秒</span>
+                            </div>
+                            <div class="content">
+                                <p>おもいだしたら、一番小さい子が何か食ってた。<br>多分、買い物帰りの誰かがアイスかなにかあげたんだろう。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail_action-bar">
+                        <div class="detail_action-bar_button">
+                            <button title="回复" class="icon-button">
+                                <ion-icon name="share-alt"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="detail_action-bar_button">
+                            <button title="转啪" class="icon-button">
+                                <ion-icon name="repeat"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="detail_action-bar_button">
+                            <button title="收藏" class="icon-button">
+                                <ion-icon name="star"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="detail_action-bar_button">
+                            <button title="更多" class="icon-button">
+                                <ion-icon name="swap"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <comment>
+                    <div class="detail_comment_cell">
+                        <div class="avatar">
+                            <div class="account__avatar"
+                                style="width: 48px; height: 48px; background-size: 48px 48px; background-image: url(https://img.pawoo.net/accounts/avatars/000/382/471/original/1b92db0d3ab0ddb6.jpg);">
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="status">
+                                <a target="_blank" data-id="229832" href="https://pawoo.net/@chipokan" title="chipokan"
+                                    class="status__display-name">
+                                    <span class="display-name">
+                                        <bdi>
+                                            <strong class="display-name__html">miฅʕ•̫͡•ʔฅ</strong>
+                                        </bdi>
+                                    </span>
+                                </a>
+                                <!-- <time datetime="2019-05-02T12:24:34.882Z" title="2019年5月02日 20:24">39秒</time> -->
+                                <span style="float:right">刚刚</span>
+                            </div>
+                            <div class="comment_content">
+                                <p>
+                                    <a
+                                        href="">@ちぽかん_イベントなし</a>&nbsp;15:00頃より行なっておりましたメンテナンスが終了いたしました。当初の予定より長くかかってしまいおかけしまして申し訳ございません。今後ともどうぞよろしくお願いいたします。
+                                </p>
+                            </div>
+                            <div class="comment_action_bar">
+                                <button title="评论" class="action_bar_button">
+                                    <ion-icon name="paper-plane"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </comment>
+                <comment>
+                    <div class="detail_comment_cell">
+                        <div class="avatar">
+                            <div class="account__avatar"
+                                style="width: 48px; height: 48px; background-size: 48px 48px; background-image: url(https://img.pawoo.net/accounts/avatars/000/219/976/original/7fe0fd7446a2a0db.jpeg);">
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="status">
+                                <a target="_blank" data-id="229832" href="https://pawoo.net/@chipokan" title="chipokan"
+                                    class="status__display-name">
+                                    <span class="display-name">
+                                        <bdi>
+                                            <strong class="display-name__html">もり（恥）（は</strong>
+                                        </bdi>
+                                    </span>
+                                </a>
+                                <!-- <time datetime="2019-05-02T12:24:34.882Z" title="2019年5月02日 20:24">39秒</time> -->
+                                <span style="float:right">1小时</span>
+                            </div>
+                            <div class="comment_content">
+                                <p>
+                                    <a href="">@んじゅーまんに</a>&nbsp;40万人突破おめでとう！
+                                </p>
+                            </div>
+                            <div class="comment_action_bar">
+                                <button title="评论" class="action_bar_button">
+                                    <ion-icon name="paper-plane"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </comment>
+                <comment>
+                    <div class="detail_comment_cell">
+                        <div class="avatar">
+                            <div class="account__avatar"
+                                style="width: 48px; height: 48px; background-size: 48px 48px; background-image: url(https://img.pawoo.net/accounts/avatars/000/137/006/original/da5db2dd9f1ce644.png);">
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="status">
+                                <a target="_blank" data-id="229832" href="https://pawoo.net/@chipokan" title="chipokan"
+                                    class="status__display-name">
+                                    <span class="display-name">
+                                        <bdi>
+                                            <strong class="display-name__html">うございます✩</strong>
+                                        </bdi>
+                                    </span>
+                                </a>
+                                <!-- <time datetime="2019-05-02T12:24:34.882Z" title="2019年5月02日 20:24">39秒</time> -->
+                                <span style="float:right">5小时</span>
+                            </div>
+                            <div class="comment_content">
+                                <p>
+                                    <a href="">@ては)ぱうーちゃ</a>&nbsp;パウーちゃん、おめでとう。
+                                    面白そうだったので参加してみました。
+                                    踊るパウーちゃん。
+                                    そして初トゥート。
+                                </p>
+                            </div>
+                            <div class="comment_action_bar">
+                                <button title="评论" class="action_bar_button">
+                                    <ion-icon name="paper-plane"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </comment>
+                <comment>
+                    <div class="detail_comment_cell">
+                        <div class="avatar">
+                            <div class="account__avatar"
+                                style="width: 48px; height: 48px; background-size: 48px 48px; background-image: url(https://img.pawoo.net/accounts/avatars/000/360/304/original/01267f8a62c926d1.jpg);">
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="status">
+                                <a target="_blank" data-id="229832" href="https://pawoo.net/@chipokan" title="chipokan"
+                                    class="status__display-name">
+                                    <span class="display-name">
+                                        <bdi>
+                                            <strong class="display-name__html">したばかりやと思</strong>
+                                        </bdi>
+                                    </span>
+                                </a>
+                                <!-- <time datetime="2019-05-02T12:24:34.882Z" title="2019年5月02日 20:24">39秒</time> -->
+                                <span style="float:right">2018年9月28日</span>
+                            </div>
+                            <div class="comment_content">
+                                <p>
+                                    <a href="">@つい先日に_ユーザーさ</a>&nbsp;Pawoo40万人企画向けに、以前描いた「20歳のパウーちゃん」の新モデルを作ってみた。
+                                    最初は静止画作品のつもりで描いていたのだけど、やっぱり動かさずにはいられなかった（笑）。
+                                    モーションは前作の使い回し。
+                                </p>
+                            </div>
+                            <div class="comment_action_bar">
+                                <button title="评论" class="action_bar_button">
+                                    <ion-icon name="paper-plane"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </comment>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function getCookie(c_name)
+        {
+            if (document.cookie.length>0)
+            {
+                c_start = document.cookie.indexOf(c_name + "=")
+                if (c_start!=-1)
+                {
+                    c_start = c_start + c_name.length+1
+                    c_end = document.cookie.indexOf(";",c_start)
+                    if (c_end==-1) c_end = document.cookie.length
+                    return unescape(document.cookie.substring(c_start,c_end))
+                }
+            }
+            return ""
+        }
+        $('#profile_button').click(
+            function () {
+                $('.profile').fadeIn();
+                $('.homepage').fadeOut();
+                $('.view_detail').fadeOut();
+
+                //document.cookie = "User_id=173";//设置cookie
+                // var User_id = document.cookie.replace(/(?:(?:^|.*;\s*)User_id\s*\=\s*([^;]*).*$)|^.*$/, "$1");//读取cookie
+                var User_id = getCookie("user_id");
+                //console.log(User_id);
+                $.post("/user/getUserServlet", {
+                    "User_id": User_id
+                }, function (res) {
+                    var u_json = JSON.parse(res);
+                    var birthday = u_json.birthday;
+                    var username = u_json.name;
+                    var info = u_json.info;
+                    var address = u_json.address;
+                    var gender = u_json.gender;
+                    if (username === "") {
+                        layer.msg('获取信息失败，请刷新页面！', {icon: 2});
+                    } else {
+                        $('#birthday').val(birthday);
+                        $('#username').val(username);
+                        $('#info').val(info);
+                        $('#address').val(address);
+                        $('#gender').val(gender);
+
+                    }
+                });
+            }
+        );
+        //头像选择
+        function fileSelect() {
+            document.getElementById("account_avatar_upload").click();
+        }
+
+        function getCookie(c_name)
+        {
+            if (document.cookie.length>0)
+            {
+                c_start = document.cookie.indexOf(c_name + "=")
+                if (c_start!=-1)
+                {
+                    c_start = c_start + c_name.length+1
+                    c_end = document.cookie.indexOf(";",c_start)
+                    if (c_end==-1) c_end = document.cookie.length
+                    return unescape(document.cookie.substring(c_start,c_end))
+                }
+            }
+            return ""
+        }
+
+        function fileSelected(input_file) {
+            // 文件选择后触发次函数
+            var file = input_file.value;
+            var f = document.getElementById("account_avatar_upload").files;
+            if (!/.(gif|jpg|jpeg|png|GIF|JPG|bmp)$/.test(file)) {
+                layer.msg('文件必须是gif、jpeg、jpg、png、bmp中的一种！', { icon: 3 });
+                return false;
+            }
+            else {
+                if (((f[0].size).toFixed(2)) >= (100 * 1024)) {
+                    layer.msg('请上传小于100kb的图片！', { icon: 3 });
+                    return false;
+                }
+            }
+            //document.cookie = "User_id=173";//设置cookie
+            // var User_id = document.cookie.replace(/(?:(?:^|.*;\s*)User_id\s*\=\s*([^;]*).*$)|^.*$/, "$1");//读取cookie
+            var User_id = getCookie("user_id");
+            $('#avatar_id').val(User_id);
+            // alert($('#avatar_id').val());
+            var form = document.getElementById("avatar_form");
+            form.submit();
+        }
+
+
+        $(function () {
+            //send
+            var send_logo = $('#home-logo');
+            $('#send_button').click(
+                function () {
+
+                    resize(send_logo, "big", 1, 60, 90, function () {
+                        resize(send_logo, "small", 0.5, 90, 60);
+                    })
+
+                });
+
+            function resize(obj, flag, speed, init, target, callback) {
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function () {
+                    obj.css('width', init + '%');
+                    if (flag === "big") {
+
+                        init += speed;
+                    } else {
+                        init -= speed;
+                    }
+
+                    if (init == target) {
+                        clearInterval(obj.timer);
+                        callback() || callback();
+                    }
+                }, 10);
+
+            }
+
+            //字数实时统计
+            $('.textarea').keyup(
+                function () {
+                    // 获取输入框输入内容长度并更新到界面
+                    var value = this.value;
+                    // 将换行符不计算为单词数
+                    value = value.replace(/\n|\r/gi, "");
+                    // 更新计数
+                    $('#character_counter').text(500 - value.length);
+                }
+            );
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!--User-->
+    <!--登陆-->
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>org.microblog.userSevlet.LoginSevlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/user/loginServlet</url-pattern>
+    </servlet-mapping>
+    <!--注册-->
+    <servlet>
+        <servlet-name>regServlet</servlet-name>
+        <servlet-class>org.microblog.userSevlet.RegSevlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>regServlet</servlet-name>
+        <url-pattern>/user/regServlet</url-pattern>
+    </servlet-mapping>
+    <!--关注-->
+    <servlet>
+        <servlet-name>concernSevlet</servlet-name>
+        <servlet-class>org.microblog.userSevlet.ConcernSevlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>concernSevlet</servlet-name>
+        <url-pattern>/user/concernServlet</url-pattern>
+    </servlet-mapping>
+    <!--取关-->
+    <servlet>
+        <servlet-name>noconcernSevlet</servlet-name>
+        <servlet-class>org.microblog.userSevlet.NoConcernSevlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>noconcernSevlet</servlet-name>
+        <url-pattern>/user/noconcernServlet</url-pattern>
+    </servlet-mapping>
+    <!--粉丝列表-->
+    <servlet>
+        <servlet-name>fanServlet</servlet-name>
+        <servlet-class>org.microblog.userSevlet.FanSevlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fanServlet</servlet-name>
+        <url-pattern>/user/fanServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!--关注列表-->
+    <servlet>
+        <servlet-name>idolServlet</servlet-name>
+        <servlet-class>org.microblog.userSevlet.IdolSevlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>idolServlet</servlet-name>
+        <url-pattern>/user/idolServlet</url-pattern>
+    </servlet-mapping>
+    <!--更改信息-->
+    <servlet>
+        <servlet-name>updateServlet</servlet-name>
+        <servlet-class>org.microblog.userSevlet.UpdateSevlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateServlet</servlet-name>
+        <url-pattern>/user/updateServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--获取信息-->
+    <servlet>
+        <servlet-name>getUserServlet</servlet-name>
+        <servlet-class>org.microblog.userSevlet.GetUserSevlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getUserServlet</servlet-name>
+        <url-pattern>/user/getUserServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+<!--微博相关-->
+<!--获取关注的人的微博-->
+    <servlet>
+        <servlet-name>BlogBloggerServlet</servlet-name>
+        <servlet-class>org.microblog.blogServlet.BlogBloggerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BlogBloggerServlet</servlet-name>
+        <url-pattern>/blog/blogBloggerServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--获取随机的微博-->
+    <servlet>
+        <servlet-name>BlogRandomServlet</servlet-name>
+        <servlet-class>org.microblog.blogServlet.BlogRandomServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BlogRandomServlet</servlet-name>
+        <url-pattern>/blog/blogRandomServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--热搜微博-->
+    <servlet>
+        <servlet-name>BlogHotServlet</servlet-name>
+        <servlet-class>org.microblog.blogServlet.BlogHotServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BlogHotServlet</servlet-name>
+        <url-pattern>/blog/blogHotServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--发微博-->
+    <servlet>
+        <servlet-name>BlogInsertServlet</servlet-name>
+        <servlet-class>org.microblog.blogServlet.BlogInsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BlogInsertServlet</servlet-name>
+        <url-pattern>/blog/blogInsertServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--个人主页微博-->
+    <servlet>
+        <servlet-name>BlogShowServlet</servlet-name>
+        <servlet-class>org.microblog.blogServlet.BlogShowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BlogShowServlet</servlet-name>
+        <url-pattern>/blog/blogShowServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--评论相关-->
+    <!--评论微博-->
+    <servlet>
+        <servlet-name>comBlogslet</servlet-name>
+        <servlet-class>org.microblog.commServlet.comBlogslet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>comBlogslet</servlet-name>
+        <url-pattern>/comm/comBlogServlet</url-pattern>
+    </servlet-mapping>
+    <!--评论评论-->
+    <servlet>
+        <servlet-name>comComslet</servlet-name>
+        <servlet-class>org.microblog.commServlet.comCLslet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>comComslet</servlet-name>
+        <url-pattern>/comm/comComServlet</url-pattern>
+    </servlet-mapping>
+    <!--删除评论-->
+    <servlet>
+        <servlet-name>delComment</servlet-name>
+        <servlet-class>org.microblog.commServlet.delcomment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delComment</servlet-name>
+        <url-pattern>/comm/delComServlet</url-pattern>
+    </servlet-mapping>
+    <!--获取评论数-->
+    <servlet>
+        <servlet-name>getCommentNumber</servlet-name>
+        <servlet-class>org.microblog.commServlet.getBccount</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getCommentNumber</servlet-name>
+        <url-pattern>/comm/getCommentNumber</url-pattern>
+    </servlet-mapping>
+
+    <!--获取评论的评论数-->
+    <servlet>
+        <servlet-name>getCCommentNumber</servlet-name>
+        <servlet-class>org.microblog.commServlet.getCccount</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getCCommentNumber</servlet-name>
+        <url-pattern>/comm/getCCommentNumber</url-pattern>
+    </servlet-mapping>
+
+    <!--获取评论-->
+    <servlet>
+        <servlet-name>getComment</servlet-name>
+        <servlet-class>org.microblog.commServlet.getCommslet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getComment</servlet-name>
+        <url-pattern>/comm/getComment</url-pattern>
+    </servlet-mapping>
+
+    <!--获取评论的评论-->
+    <servlet>
+        <servlet-name>getCComment</servlet-name>
+        <servlet-class>org.microblog.commServlet.getCLslet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getCComment</servlet-name>
+        <url-pattern>/comm/getCComment</url-pattern>
+    </servlet-mapping>
+
+    <!--获取某人的评论-->
+    <servlet>
+        <servlet-name>getmyComment</servlet-name>
+        <servlet-class>org.microblog.commServlet.getUsercslet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getmyComment</servlet-name>
+        <url-pattern>/comm/getmyComment</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>uploadImage</servlet-name>
+        <servlet-class>org.microblog.userSevlet.uploadImage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>uploadImage</servlet-name>
+        <url-pattern>/uploadImage</url-pattern>
+    </servlet-mapping>
+</web-app>
+

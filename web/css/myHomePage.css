@@ -1,0 +1,35 @@
+.myHomepage_header{
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    width: 100%;
+}
+.myHomepage_action_bar{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 30%;
+}
+.myHomepage_avatar_image{
+    margin: 0 auto;
+    width: 100px;
+    margin-top: 10px;
+}
+.myHomepage_avatar_image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 120px;
+}
+.myHomepage_concern{
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+}
+.myHomepage_concern ion-icon{
+    font-size: 24px;
+}
+.myHomepage_info{
+    text-align: center;
+    margin-top: 10px;
+}

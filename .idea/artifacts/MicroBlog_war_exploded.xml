@@ -1,0 +1,47 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="MicroBlog:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MicroBlog_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="blog/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="blog" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.44-bin" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/fastjson-1.2.58.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/jspsmartupload.jar" />
+          <element id="library" level="application" name="mysql-connector-java-5.1.44-bin" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/el-api.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/jasper.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/jsp-api.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/ecj-4.6.3.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/jasper-el.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-api.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-jni.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina-ha.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/servlet-api.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-dbcp.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-jdbc.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-util.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina-ant.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-coyote.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/websocket-api.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/commons-io-1.4.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/jspSmartUpload.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-i18n-es.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-i18n-fr.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-i18n-ja.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/annotations-api.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina-tribes.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-util-scan.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-websocket.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina-storeconfig.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/commons-fileupload-1.4.jar" />
+          <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/mysql-connector-java-5.1.44-bin.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

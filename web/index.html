@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Micro Blog</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/log_reg.css">
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/log_reg.js"></script>
+    <script type="text/javascript" src="js/index_right.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+</head>
+
+<body>
+<div class="about-body">
+    <div class="about-cols">
+        <section class="main">
+            <h1>
+                <img alt="MicroBlog" width="535" src="pic/logo.png" id="logo">
+            </h1>
+
+            <div class="about-col-body">
+                <div class="about-col-body-spacer top"></div>
+                <div>
+                    <div class="simple_form">
+                        <button class="login_button">登录&注册</button>
+                    </div>
+                    <div class="form_footer">
+                        <ul class="nolist">
+                            <li><a href="">友情链接</a></li>
+                            <li><a href="">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-col-body-spacer"></div>
+                <p class="hide_on_short_display">
+                    ピクシブが運営するマストドンインスタンス「Pawoo」は、文章や画像を投稿して楽しむSNSです。「創作活動や自由なコミュニケーションを楽しめる場」として、どなたにも幅広く使っていただけます。</p>
+                <div class="about-col-body-spacer bottom"></div>
+            </div>
+        </section>
+        <section class="timeline">
+            <div class="cloumn">
+                <div class="column-header__wrapper">
+                    <h1 class="column-header">
+                        <button id="header_button">
+                            <div class="pawoo-extension-standalone-community">
+                                <img src="pic/small_logo.png" id="small_logo">
+                            </div>
+                            <div class="pawoo-extension-standalone-community">
+                                \ 538,961人在线 28,867,368回复 /
+                            </div>
+                        </button>
+                    </h1>
+                </div>
+                <div class="scrollable">
+                    <div id="first_article"></div>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--底部信息栏-->
+    <div class="info">
+        <ul class="no-list">
+            <li>
+                <a href="https://www.pixiv.net/">
+                    <ion-icon name="logo-chrome"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://joinmastodon.org/">
+                    <ion-icon name="logo-ionitron"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="no-list">
+            <li>
+                <a href="https://github.com/pixiv/mastodon/tree/pawoo">源代码</a>
+                (2.4.0)
+            </li>
+            <li>
+                <a href="/about/more">关于本实例</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!--弹出后的遮罩层-->
+<div class="log_reg-background"></div>
+<!--登陆弹出框-->
+<div id="log_reg-log" class="log_reg">
+    <div class="log_reg-1">
+        <a id="log-quit" class="log_reg-quit">✖</a>
+    </div>
+    <img class="log_reg-logo" src="pic/logo.png">
+    <h1 class="log_reg-title">ROMAA</h1>
+    <div class="log_reg-form">
+        <!--登陆表单-->
+        <form class="log_form">
+            <div class="log-input">
+                <input id="log_name" placeholder="请输入用户名">
+            </div>
+            <div class="log-input">
+                <input id="log_pwd" type="password" placeholder="请输入密码">
+            </div>
+            <div class="spacer"></div>
+            <div class="log-button-div">
+                <button type="button" id="log_button" class="log_button">登录</button>
+            </div>
+        </form>
+        <div class="form_footer">
+            <ul class="no-list">
+                <li><a type="button" id="reg-a" href="javascript:;">注册</a></li>
+                <li><a href="">|</a></li>
+                <li><a href="">忘记密码</a></li>
+                <li><a href="">|</a></li>
+                <li><a href="">没有收到邮件</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--注册弹出框-->
+<div id="log_reg-reg" class="log_reg">
+    <div class="log_reg-1">
+        <a id="reg-quit" class="log_reg-quit">✖</a>
+    </div>
+    <h1 class="log_reg-title">ROMAA</h1>
+
+    <form>
+        <div class="log-input">
+            <input id="reg_name" placeholder="请输入用户名">
+        </div>
+        <div class="log-input">
+            <input id="reg_pwd" type="password" placeholder="请输入密码">
+        </div>
+        <div class="log-input">
+            <input id="reg_pwd_again" type="password" placeholder="请确认密码">
+        </div>
+        <div class="spacer"></div>
+        <div class="log-button-div">
+            <button type="button" id="reg_button" class="log_button">注册</button>
+        </div>
+    </form>
+    <div class="form_footer">
+        <ul class="no-list">
+            <li><a type="button" id="log-a" href="javascript:;">&lt;&lt;返回登陆页面</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+</html>

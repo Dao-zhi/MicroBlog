@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MicroBlog">
+    <output-path>C:/Program Files/Apache Software Foundation/Tomcat 8.0/webapps/MicroBlog</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="MicroBlog:war exploded" />
+    </root>
+  </artifact>
+</component>

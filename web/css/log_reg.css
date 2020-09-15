@@ -1,0 +1,111 @@
+*{
+	margin:0;
+	padding:0;
+}
+.log_reg{
+	display: none;
+    width: 500px;
+    height: 500px;
+    position: absolute; 
+	left: 36%;
+	top: 50%;
+    transform: translate(-50%,-50%);
+	box-shadow:10px 10px 5px grad;
+	background:#282c37;
+	border:2px solid gray;
+}
+
+.log_reg-1{
+	width:100%;
+	height:10px;
+	position:relative;
+}
+
+.log_reg-quit{
+	color:white;
+	font-size:36px;
+	height:40px;
+	width:40px;
+	float:right;
+	background:transparent;
+	border:2px solid #282c37;
+	position:absolute;
+	right:0;
+	top:0;
+	cursor:pointer;
+}
+
+
+.log_reg-quit:hover{
+	color:gray;
+}
+
+.log_reg-background{
+	display:none;
+    height: 100%;
+    width: 100%;
+	background:#989898;
+	opacity:0.5;
+	position:absolute;
+}
+
+.log_reg-logo{
+	display:block;
+	width:50%;
+	margin:10px auto;
+}
+.log_reg-title{
+	display:block;
+	text-align:center;
+	font-size:70px;
+	font-weight:900;
+	margin:5px auto;
+	color:white;
+}
+
+input{
+	background:transparent;
+	border:0;
+	border-bottom:2px solid #9baec8;
+	width:100%;
+	height:40px;
+	margin:10px auto;
+	outline:none;
+	color:white;
+	font-size:100%;
+}
+input:focus{
+	border-bottom:2px solid white;
+}
+
+.log-input{
+	width:70%;
+	height:50px;
+	margin:20px auto;
+}
+.spacer{
+	height:5px;
+}
+.log-button-div{
+	height:50px;
+	width:70%;
+	margin: 0 auto;
+}
+.log_button{
+  display: block;
+  margin: 20px auto 0;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 4px;
+  background: #2b90d9;
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: 0;
+  font-size: 100%;
+}
+.log_button:hover{
+  background: #419bdd;
+}
